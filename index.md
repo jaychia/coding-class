@@ -42,7 +42,7 @@ To work in a virtual environment, follow the following workflow in your Terminal
 2. `virtualenv venv` - this creates a virtual environment in the folder `venv`, which is created in whichever directory your current shell is in; no need to run this if you have a pre-existing virtual environment!
 3. `source venv/bin/activate` - this activates the virtual environment!
 
-With your virtual environment activated, everything you install via pip will now go into that `venv` folder instead of somewhere mysterious wherever Python is installed your computer (a 'global' installation). This makes it a lot neater to do this per project! Just make sure to activate the virtual environment by running `.\venv\Scripts\activate` on the appropriate `venv` folder whenever you want to run code or install Python packages for the project.
+With your virtual environment activated, everything you install via pip will now go into that `venv` folder instead of somewhere mysterious wherever Python is installed your computer (a 'global' installation). This makes it a lot neater to do this per project! Just make sure to activate the virtual environment by running `source venv/bin/activate` on the appropriate `venv` folder whenever you want to run code or install Python packages for the project.
 
 ## Windows
 
