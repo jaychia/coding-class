@@ -113,6 +113,12 @@ Try the following on your terminal and see that they return what you'd expect:
 6. `5 >= 4` returns `True` because 5 is bigger than or equal to 4
 6. `5 <= 4` returns `False` because 5 is not smaller than or equal to 4
 
+Python also has a `not` keyword, which negates a boolean that follows it. Try this out:
+
+1. `not True` - returns `False`
+2. `not False` - returns `True`
+3. `not 5 >= 4` - returns `False` because 5 is bigger than or equal to 4, and we negate that!
+
 ### Lists
 Lists are objects that are an ordered collection of elements. By this, I really just mean that it contains 'things' in a certain order. To create a list, you do something like `[1,2,3]`. This is really useful because lists can store stuff in a certain order! For example, in a game you might want to store a list of items you have in your inventory, or a list of enemies you have to clear etc.
 
@@ -139,8 +145,14 @@ Our last object for this lesson is the Dictionary. A dictionary allows us to hav
 weapon = {
   'damage': 50,
   'name': 'dagger of mischief',
-  'ownder': 'Jay Chia'
+  'owner': 'Jay Chia',
+  'upgraded': True,
+  'previous_owners': ['James', 'Jamie'],
+  'other_stats': {
+    'age': 50,
+    'durability': 0.4,
+  }
 }
 ```
 
-You can see how this might be useful to store information! We can later retrieve information regarding the damage of the weapon by calling `weapon['damage']`.
+You can see how this might be useful to store information! We can later retrieve information regarding the damage of the weapon by calling `weapon['damage']`. Notice also how we can put a dictionary within the dictionary! This is called a 'nested' dictionary.
