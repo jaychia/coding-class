@@ -4,6 +4,8 @@ This contains material to learning Python from scratch. The material in this cla
 
 ### Table of contents
 
+- [Lesson 0](https://github.com/jaychia/coding-class/l0.md) (Setting up, using your shell)
+
 - [Lesson 1](https://github.com/jaychia/coding-class/l1.md) (Ints, Strings, Booleans, Lists, Dictionaries)
 
 - [Lesson 2](https://github.com/jaychia/coding-class/l2.md) (Functions, If statements, Loops)
