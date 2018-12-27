@@ -8,7 +8,7 @@ This contains material to learning Python from scratch. The material in this cla
 
 - [Lesson 1](#lesson-1) (Ints, Strings, Booleans, Lists, Dictionaries)
 
-- [Lesson 2]() (Functions, If statements, Loops)
+- [Lesson 2](#lesson-2) (Functions, If statements, Loops)
 
 - [Lesson 3]() (Classes and Objects)
 
