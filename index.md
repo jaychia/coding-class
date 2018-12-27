@@ -156,3 +156,16 @@ weapon = {
 ```
 
 You can see how this might be useful to store information! We can later retrieve information regarding the damage of the weapon by calling `weapon['damage']`. Notice also how we can put a dictionary within the dictionary! This is called a 'nested' dictionary.
+
+To assign a new key and value in a dictionary, use `d[key] = value`. For example, if we did `weapon[3] = False`, the new weapon dictionary will look like (... added so I don't have to write the rest of the dictionary):
+
+```
+weapon = {
+  'damage': 50,
+  'name': 'dagger of mischief',
+  3: False,
+  ...
+}
+```
+
+To delete a key-value pair from the dictionary, use `del d[key]`. For example, calling `del weapon[3]` on the previous dictionary will make the weapon dictionary revert to its original form.
