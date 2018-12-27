@@ -169,3 +169,68 @@ weapon = {
 ```
 
 To delete a key-value pair from the dictionary, use `del d[key]`. For example, calling `del weapon[3]` on the previous dictionary will make the weapon dictionary revert to its original form.
+
+
+# Lesson 2
+
+In this lesson, we will touch on loops, if statements and functions!
+
+### Loops
+Loops make it easy to work with large amounts of data that you don't want to go through individually! For example,
+
+```
+l = [1, 2, 3]
+for x in l:
+  print(x)
+```
+
+This simple for-loop will print `1` and then `2` and then `3` in order. For loops have the format `for <variable_name> in <list>:`. Doing so lets you go through the list element by element, assign that element to the variable name of your choosing, and write code for that specific element inside the body of the for-loop.
+
+Sometimes, you might require to iterate a certain number of times rather than iterate over the elements of a list. For example, if I wanted to draw an object 100 times, I can do the following:
+
+```
+for i in range(100):
+  draw_object()
+```
+
+The `range(n)` function produces a list-like object that you can think of as being `[0, 1, 2, 3, ... n-1]` and it has `n` number of elements. This allows us to call the `draw_object()` function 100 times! This is also useful for iterating through a list using its indices, for example:
+
+```
+l = [1, 2, 3]
+for i in range(len(l)):
+  print(l[i])
+```
+
+This loop as the same effect as the first loop I showed you - it prints the elements of l out in order.
+
+### Functions
+Sometimes you have a piece of code that you want to pull out and make it reusable. Welcome to functions!
+
+Functions have the syntax:
+```
+def <function_name>(argument1, argument2, ...):
+  # Function body
+  return final_answer
+``` 
+
+Functions will always return something. If your return statement is not specified, it returns a special value `None`. However, it is good practice to try and make it return something!
+
+For example, if I had the following code which gives me a new list `l2` with elements each 1 larger than the corresponding element in `l1`:
+
+```
+l1 = [1, 2, 3]
+l2 = []
+for x in l1:
+  l2.append(x + 1)
+```
+
+I could make this functionality reusable for different l1 like so:
+```
+def increment_elements_by_1(l):
+  new_list = []
+  for x in l:
+    new_list.append(x + 1)
+  return new_list
+
+l2 = increment_elements_by_1([1,2,3])
+```
