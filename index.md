@@ -173,7 +173,17 @@ To delete a key-value pair from the dictionary, use `del d[key]`. For example, c
 
 # Lesson 2
 
-In this lesson, we will touch on loops, if statements and functions!
+In this lesson, we will touch on loops, if statements and functions! To do so, we need to understand the concept of 'code blocks'. Python does code blocks using indentation (the Tab key on your keyboard) - all code in the same block are on the same indent line. Code blocks determine the 'scope' in which code runs:
+
+```
+this is one
+code block because
+all the code has no indent
+  but this is now
+  a second code block
+```
+
+Python will throw an error if you try to run a file that is improperly formatted! The error will usually complain about code not being on the correct indentation line. Now, we are ready to jump into loops and functions - both of which have a code block!
 
 ### Loops
 Loops make it easy to work with large amounts of data that you don't want to go through individually! For example,
@@ -181,15 +191,19 @@ Loops make it easy to work with large amounts of data that you don't want to go 
 ```
 l = [1, 2, 3]
 for x in l:
-  print(x)
+  print(x) # This here is the for loop's code block!
 ```
 
-This simple for-loop will print `1` and then `2` and then `3` in order. For loops have the format `for <variable_name> in <list>:`. Doing so lets you go through the list element by element, assign that element to the variable name of your choosing, and write code for that specific element inside the body of the for-loop.
+Basically, a for loop loops (iterates) through an 'iterator', in this case a list, and assigns each element of the list to a variable name (in this case `x`). Then it runs the code block with the element as `x`! This is repeated for all elements in the list. Simple :)
+
+This simple for-loop will print `1` and then `2` and then `3` in order.
 
 Sometimes, you might require to iterate a certain number of times rather than iterate over the elements of a list. For example, if I wanted to draw an object 100 times, I can do the following:
 
 ```
 for i in range(100):
+  do_something()
+  do_something_else()
   draw_object()
 ```
 
@@ -209,13 +223,15 @@ Sometimes you have a piece of code that you want to pull out and make it reusabl
 Functions have the syntax:
 ```
 def <function_name>(argument1, argument2, ...):
-  # Function body
+  # Function body, notice it is on a new code indent
   return final_answer
 ``` 
 
-Functions will always return something. If your return statement is not specified, it returns a special value `None`. However, it is good practice to try and make it return something!
+Notice that the entire function body is on its on code block. This is how Python knows what code belongs to the function!
 
-For example, if I had the following code which gives me a new list `l2` with elements each 1 larger than the corresponding element in `l1`:
+Functions will always return something. If your return statement is not specified, it returns a special value `None`. However, it is good practice to try and make it return something! In this case, this function returns whatever value is associated with the variable `final_answer`.
+
+To demonstrate the power of functions, if I had the following code which gives me a new list `l2` with elements each 1 larger than the corresponding element in `l1`:
 
 ```
 l1 = [1, 2, 3]
@@ -234,3 +250,4 @@ def increment_elements_by_1(l):
 
 l2 = increment_elements_by_1([1,2,3])
 ```
+Now, I can pass the function **any** list and it would give me (return) a new list with all elements incremented by 1. Dandy :)
