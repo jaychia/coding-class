@@ -251,3 +251,20 @@ def increment_elements_by_1(l):
 l2 = increment_elements_by_1([1,2,3])
 ```
 Now, I can pass the function **any** list and it would give me (return) a new list with all elements incremented by 1. Dandy :)
+
+### If Statements
+
+In code, it is oftentimes the case that you want to 'do this if something is true, otherwise do something else'. This is called an if-statement.
+
+```
+if check_1:
+  do_something()
+elif check_2:
+  do_something_else()
+else:
+  default_to_something()
+```
+
+In the above example, `check_1` and `check_2` are both **booleans**, which if you can recall are either `True` or `False`. You can read the line of code in your head as follows: If `check_1` is `True`, then run the function `do_something()`, else if `check_2` is `True`, run the function `do_something_else()`, otherwise, run the function `default_to_something()`.
+
+Notice how code blocks are used here - all code are indented the same under the if statement to indicate to Python that they should be run if the condition above it holds.
